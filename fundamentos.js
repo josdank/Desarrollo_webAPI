@@ -148,3 +148,17 @@ conectionBDDMongo();
 
 const registerUser = (email) => { console.log("user registred")}
 registerUser('eduard@gmail.com')
+
+
+const datosBananeritoGood = {
+    name: "Bananerito",
+    age:1,
+    address:{
+        city:"Machala",
+        telephone: 12345
+    },
+    friends: ['Ccodrigol', 'Torero'],
+    status:true
+}
+
+//hila que hace 
