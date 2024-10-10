@@ -105,18 +105,23 @@ console.log(newGoals);
 })()
 
 //FUNCIÓN DECLARADA
+
 function getAvatar(){
     console.log('/photo/user.png');
 }
 getAvatar();
 
 //FUNCIÓN EXPRESADA
+
 const conectionBDD = function(){
     console.log("conexión exitosa"); //se alamacena una variable
 }
 conectionBDD();
 
+//------------------------------------------------
+
 // ARGUMENTOS
+
 const validarEmailAndToken = function(email, token = '555'){
     console.log(`El token es ${token} y su email es ${email}`);
 }
@@ -144,11 +149,17 @@ tiposRetorno();
 const conectionBDDMongo = () => {
     console.log("conexión exitosa"); //se alamacena una variable
 }
+
 conectionBDDMongo();
 
+
 const registerUser = (email) => { console.log("user registred")}
+
 registerUser('eduard@gmail.com')
 
+//-------------------------------------------
+
+//Objetos
 
 const datosBananeritoGood = {
     name: "Bananerito",
@@ -161,4 +172,53 @@ const datosBananeritoGood = {
     status:true
 }
 
-//hila que hace 
+console.log(datosBananeritoGood.name)
+console.log(datosBananeritoGood.friends)
+console.log(datosBananeritoGood.status)
+
+//FORMA LARGA
+const nameB = datosBananeritoGood.name
+const friendsb = datosBananeritoGood.friends
+
+//ES6
+//DESESTRUCTURACIÓN
+
+const {name, address, friends, status:estado} = datosBananeritoGood //FORMA CORTA => Alamacenar variables en diferentes 
+console.log(estado)
+
+//Propiedades
+datosBananeritoGood.photo = 'bananerito.png'
+console.log(datosBananeritoGood);
+
+delete datosBananeritoGood.age
+console.log(datosBananeritoGood);
+
+Object.values(datosBananeritoGood).includes("") ? console.log("Error") : console.log("Ok")
+
+const lunch = {
+    nameL: "Pollo Boraster",
+    price:5
+}
+
+const drinks = {
+    nameD: "Jugo de cooco",
+    sweet: false
+}
+
+const odeUser={...lunch,...drinks} //propagación 
+
+console.log(odeUser); //Se usa un perador spread para este ejemplo
+
+//----------------------------------------------------------------
+
+//ES6
+//Nombres abreviados de propiedades 
+const nameVideoGame = "MarioKart"
+const priceVideoGame = 89
+
+const VideoGame = {
+    nameVideoGame, //Si se tiene el mismo nombre en clave y en el valor se lo puede omitir  nameVideoGame:nameVideoGame
+    priceVideoGame
+}
+
+console.log(VideoGame)
