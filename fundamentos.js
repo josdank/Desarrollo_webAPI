@@ -1,9 +1,26 @@
-// JS - Lado del cliente
+//Internet
+    //TCP/IP
+    //ISP = IP - Dispositivo (Modem) y (Router)
+    //WEB
+    //CLIENTE - SERVIDOR (ARQUITECTURA WEB)
+    //HTTP (segura y no segura)
+    //Dominio y subdominio
+    // Hosting y Dominio 
+// JS - Multiplataforma
+// JS - Lado del cliente + V8
+// ECMA International ===w3c 
+// ECMA Script
 // NODE + V8 = JS Lado del servidor
 
-// Variables = Contenedor de informacion
+// Variables 
+//Contenedor de informacion
+// Tipos Simples - compuestos
 
-// Tipos Simples
+// Strings
+// Numbers
+// Connditionals
+// Functions
+// Objects
 
 let data = 12;              // Entero
 let data2 = 23.6;           // Float
@@ -219,6 +236,9 @@ const priceVideoGame = 89
 const VideoGame = {
     nameVideoGame, //Si se tiene el mismo nombre en clave y en el valor se lo puede omitir  nameVideoGame:nameVideoGame
     priceVideoGame
+    //nVG:nameVideoGame,
+    //pVG:priceVideoGame
 }
 
 console.log(VideoGame)
+
