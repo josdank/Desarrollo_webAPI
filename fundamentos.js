@@ -343,5 +343,30 @@ console.log(machines)
  allServices =[...servicesCharge,...servicesMachines]
  console.log(allServices)
 
-//---------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
 //Sistema de plantillas clinicas para la atención odontologica en la EPN 
+//-------------------------------------------------------------------------------------------------
+
+//----------------------------------------------------
+// INTERMEDIO                                        |
+//----------------------------------------------------
+
+//TRES estados
+// -PENDIENTE
+// -REALIZADO
+// -
+
+// DOOM - API que permite manipular los elementos de un HTML 
+// HTML se puede llegar a formar como lenguaje de programción con el motor  de plantillas 
+//      solo así se puede convertir el HTML como lenguaje de rogamación. 
+
+
+
+
+// PROGRAMACIÓN 
+// Imperativa - Declarar cada paso por  // JS PURO - VANILLA - JS 
+// Declarativa - Solicitar que se necesita  // REACT
+
+
+
+
