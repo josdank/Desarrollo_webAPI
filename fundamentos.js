@@ -108,7 +108,7 @@ goals.forEach((goal) => {console.log(goal);})
 
 const newGoals = goals.map((goal) => goal.toUpperCase())
 
-// Summarty
+// Summary
 
 console.log(goals);
 console.log(newGoals);
@@ -242,3 +242,106 @@ const VideoGame = {
 
 console.log(VideoGame)
 
+//----------------------------------------------------------------
+
+//Arrays
+const boys = ["Peter", "Juan","Luisa","Anahi", "Mateus" ]
+
+const customers = [
+    {
+        name:"Luis",
+        order:45,
+        place:"Floresta"
+    },
+    {
+        name:"Janeth",
+        order:4,
+        place:"Villaflora"
+    }
+]
+
+boys.forEach((b,i) => {console.log(`${i+1} - ${b}`)})
+
+customers.forEach((c,i)=> console.log(`${i+1} ${c.order} ${c.name}`)) //solo iterar el arreglo pero no modificar (ForEach)
+
+const services = [
+    {
+        name: " Basic",
+        mount: 5,
+        image:"photo/service1.png",
+        details: ["Ateción familiar", "Grupo Social"]
+    },
+    {
+        name: "Plus",
+        mount: 25,
+        image:"photo/service2.png",
+        details: ["Ateción diaria", "Seguro Médico    "]
+    },   
+]
+
+const newServices = services.map((s)=>{ //map permite modificar el arreglo o la información 
+
+    return{ 
+        name:s.name,
+        image:s.image,
+    }
+})
+console.log(newServices);
+
+const newServices1 = services.map((s)=>( //map permite modificar el arreglo o la información 
+
+    { //para evitar la palabra return en vez de llaves se coloca parentesis 
+        name:s.name,
+        image:s.image,
+    }
+))
+console.log(newServices1);
+
+//----------------------------------------------
+const equipments = ["Tubo de Oxígeno", "Camilla", "Termometros", "Medidores de P."]
+
+//ES6
+//Desestructuración
+const [equipment1, equipment2,equipment3,equipment4] = equipments
+console.log(equipment1);
+console.log(equipment2);
+
+//Sistema de desarrollo...
+
+const categories = ["Camas", "Balanceados",  "Juguetes", "Accesorios", "Ropa", "Postres"]
+
+categories.length <= 5 ? console.log("Registrar Categoría") : console.log("No se puede registrar")
+
+categories.push("Medicamentos")
+categories.unshift("Adopciones")
+
+categories.pop() //Eliminar metodo del array
+categories.shift() //Elimina el primer elemento del arreglo 
+
+console.log(categories);
+
+resultCategories = categories.find((c)=>( c === "Camas")) //Cada que se use el .find necesitara un return o solo () del mismo modo si es una función necesitara un Return 
+resultCategories ? console.log("Mostrar Sub categorías") : console.log("No existe esa categoría");
+
+let resultCategoriesFilter = categories.filter((c)=>(c.startsWith('C')))
+console.log(resultCategoriesFilter);
+
+//---------------------------------------------------------
+//ES6
+ const servicesCharge = ["Grúa","Material", "Herramientas"]
+ const servicesMachines = ["Volquetas", "Trailer", "Tractores", "Excavadoras"]
+
+ //...REST (Agrupar valores restantes)
+ // - El RESt operator es una sintaxis que oermite agrupar multiples elementos en un objeto iterable 
+const [machine1, , ...machines] = servicesMachines
+console.log(machines)
+
+ //...SPREAD (Expandir) - Fuciona
+ //LET reasigna un valor 
+
+ let allServices = []
+ allServices =[...servicesCharge,...servicesMachines]
+ console.log(allServices)
+
+//---------------------------------------------------------
+//Sistema de plantillas clinicas para la atención odontologica en la EPN 
