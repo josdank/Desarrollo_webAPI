@@ -360,13 +360,106 @@ console.log(machines)
 // HTML se puede llegar a formar como lenguaje de programción con el motor  de plantillas 
 //      solo así se puede convertir el HTML como lenguaje de rogamación. 
 
-
-
-
 // PROGRAMACIÓN 
 // Imperativa - Declarar cada paso por  // JS PURO - VANILLA - JS 
 // Declarativa - Solicitar que se necesita  // REACT
 
+//----------------------------------------------------
+// PROGRAMACIÓN ASINCRONA                            |
+//----------------------------------------------------
+
+//CALLBACK
+const getUserBDD = () => {console.log({id:123, name: "Eduard", rol:"Admin"})}
+setTimeout(getUserBDD, 5000) 
+
+//CALBACK - HELL
+// PROMESAS
+const conectionBDDExterna = (dataConnection) => {
+    return new Promise ((resolve,  reject)=>{
+        setTimeout(()=>{
+            dataConnection ? resolve("Conecction-OK") : reject ("Conecction-bad")
+        }, 3000);
+    })
+}
+
+// Then y Catch
+conectionBDDExterna(false)
+    .then((response) => {console.log(response)})
+    .catch((error) => {console.log(error)})
+
+// Async / Await
+
+const verifyConnection =async () => {
+    try {
+        console.log(await conectionBDDExterna(true))
+    } catch (error) {
+        console.log(error);
+    }
+}
+verifyConnection()
+
+//Consumo de APIS
+fetch("https://dog.ceo/api/breeds/image/")
+    .then ((request) => (request.json()))
+    .then((data) =>{console.log(data)} )
+    .catch((error) => {console.log(error)})
+
+const getDog = async () =>{
+    try{
+        let request = await fetch("https://dog.ceo/api/breeds/image/random")
+        let data = await request.json()
+    console.log(data)
+    } catch (error){
+        console.log(error)
+    }
+}
+getDog()
+
+//Token: lerx9FDWD5PH78M207Cj95ac4KTt8G3v
+//Url: api.giphy.com/v1/stickers/trending
+
+const url = 'httpS://api.giphy.com/v1/stickers/trending'
+const token = 'lerx9FDWD5PH78M207Cj95ac4KTt8G3v'
+
+const ghipy = async () =>{
+    try{
+        let request = await fetch("https://api.giphy.com/v1/stickers/trending?apikey=lerx9FDWD5PH78M207Cj95ac4KTt8G3v")
+        let data = await request.json()
+    console.log(data)
+    } catch (error){
+        console.log(error)
+    }
+}
+ghipy()
+
+//----------------------------------------------------
+// ADVANCED                                          |
+//----------------------------------------------------
+//                                                   |
+ //LOCAL STORAGE                                     |
+ //MODULES                                           |
+ //COMMMONJS = require                               |
+ // ESMODULES = import o From                        |
+ //                                                  |
+//----------------------------------------------------
+// GRADUADOS                                         |
+//----------------------------------------------------
+
+// BACKEND DEVELOPERS
+
+//----------------------------------------------------//---------------------------------------------------
+//FRAMEWORK: Resolver un problema más complejo en desarrollo                                               | 
+// Librerias: Solventan una sola necesidad                                                                 |
+//----------------------------------------------------//---------------------------------------------------
+
+// El código se adapta al framework
+// la librería se adapta a tu código 
 
 
+// STAGE 1 = FUNDAMENTOS AGNOSTICOS
 
+// STAGE 2 = PROYECTO 100% BACKEND
+
+// STAGE = PROYECTO FULLSTACK
+
+// 10 SEMANAS
